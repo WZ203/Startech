@@ -420,16 +420,42 @@
     }
 
     .brand img{
-      max-width:150px;
-      max-height:72px;
+      width:auto;
+      height:auto;
       object-fit:contain;
       opacity:1;
       filter:none;
       transition:.3s ease;
+      display:block;
     }
 
     .brand img:hover{
       transform:scale(1.08);
+    }
+
+    .brand img.logo-mercedes{
+      width:108px;
+      max-height:108px;
+    }
+
+    .brand img.logo-chrysler{
+      width:190px;
+      max-height:86px;
+    }
+
+    .brand img.logo-dodge{
+      width:190px;
+      max-height:84px;
+    }
+
+    .brand img.logo-jeep{
+      width:178px;
+      max-height:88px;
+    }
+
+    .brand img.logo-ram{
+      width:112px;
+      max-height:112px;
     }
 
     .why{
@@ -799,9 +825,29 @@
         padding:24px 20px;
       }
 
-      .brand img{
-        max-width:145px;
-        max-height:64px;
+      .brand img.logo-mercedes{
+        width:90px;
+        max-height:90px;
+      }
+
+      .brand img.logo-chrysler{
+        width:165px;
+        max-height:74px;
+      }
+
+      .brand img.logo-dodge{
+        width:165px;
+        max-height:74px;
+      }
+
+      .brand img.logo-jeep{
+        width:155px;
+        max-height:76px;
+      }
+
+      .brand img.logo-ram{
+        width:95px;
+        max-height:95px;
       }
 
       .why-text{
@@ -913,23 +959,23 @@
 
     <div class="brands">
       <div class="brand">
-        <img src="mercedes.png" alt="Mercedes-Benz">
+        <img class="logo-mercedes" src="mercedes.png" alt="Mercedes-Benz">
       </div>
 
       <div class="brand">
-        <img src="chrysler.png" alt="Chrysler">
+        <img class="logo-chrysler" src="chrysler.png" alt="Chrysler">
       </div>
 
       <div class="brand">
-        <img src="dodge.png" alt="Dodge">
+        <img class="logo-dodge" src="dodge.png" alt="Dodge">
       </div>
 
       <div class="brand">
-        <img src="jeep.png" alt="Jeep">
+        <img class="logo-jeep" src="jeep.png" alt="Jeep">
       </div>
 
       <div class="brand">
-        <img src="ram.png" alt="RAM">
+        <img class="logo-ram" src="ram.png" alt="RAM">
       </div>
     </div>
   </section>

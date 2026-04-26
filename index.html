@@ -1,430 +1,319 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Star Tech Auto Repair | Taller Mercedes-Benz en Concón</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+<title>Star Tech Auto Repair</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: #071a33;
-      background: #ffffff;
-    }
+<style>
 
-    header {
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 7%;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-    .logo {
-      line-height: 1;
-      color: #0b2a55;
-    }
+body {
+    background: #f5f7fa;
+    color: #111;
+}
 
-    .logo strong {
-      display: block;
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
+/* NAVBAR */
 
-    .logo span {
-      display: block;
-      margin-top: 8px;
-      font-size: 13px;
-      letter-spacing: 3px;
-      font-weight: 500;
-    }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
-    nav a {
-      margin-left: 28px;
-      text-decoration: none;
-      color: #071a33;
-      font-size: 13px;
-      font-weight: 700;
-    }
+.logo {
+    font-weight: 900;
+    font-size: 20px;
+    color: #0a1f44;
+}
 
-    .whatsapp-top {
-      background: #004aad;
-      color: white;
-      padding: 13px 22px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-    }
+.menu {
+    display: flex;
+    gap: 25px;
+}
 
-    .hero {
-      min-height: 580px;
-      background:
-        linear-gradient(90deg, rgba(0,15,35,0.88), rgba(0,15,35,0.42), rgba(0,15,35,0.05)),
-        url("hero-taller.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding: 80px 7%;
-      color: white;
-    }
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
 
-    .hero-content {
-      max-width: 630px;
-    }
+.btn-whatsapp {
+    background: #0a5bd8;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.05;
-      margin-bottom: 20px;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
+/* HERO */
 
-    .hero h1 span {
-      display: block;
-      font-size: 58px;
-    }
+.hero {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+    linear-gradient(90deg, rgba(5,18,40,0.92), rgba(5,18,40,0.55), rgba(5,18,40,0.1)),
+    url('img/hero-taller.jpg');
+    background-size: cover;
+    background-position: center right;
+}
 
-    .hero p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin-bottom: 22px;
-      font-weight: 500;
-    }
+.hero-content {
+    margin-left: 6%;
+    max-width: 600px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 18px;
-      background: #005bd3;
-      color: white;
-      padding: 17px 30px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 800;
-      text-transform: uppercase;
-      box-shadow: 0 10px 25px rgba(0,75,173,0.25);
-    }
+.hero h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
 
-    section {
-      padding: 70px 7%;
-    }
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ddd;
+}
 
-    .section-title {
-      text-align: center;
-      color: #004aad;
-      font-size: 26px;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 45px;
-    }
+.btn-primary {
+    background: linear-gradient(135deg, #0057b8, #003b82);
+    padding: 16px 28px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
 
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 56px;
-      height: 3px;
-      background: #004aad;
-      margin: 14px auto 0;
-    }
+/* SECCIONES */
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 24px;
-      text-align: center;
-    }
+.section {
+    padding: 80px 6%;
+}
 
-    .service {
-      padding: 20px 14px;
-      border-right: 1px solid #dde6f2;
-    }
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-weight: 800;
+    color: #0a1f44;
+}
 
-    .service:last-child {
-      border-right: none;
-    }
+/* SERVICIOS */
 
-    .icon {
-      font-size: 42px;
-      margin-bottom: 18px;
-      color: #004aad;
-    }
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
 
-    .service h3 {
-      font-size: 14px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      font-weight: 800;
-    }
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
-    .service p {
-      font-size: 13px;
-      color: #334;
-      line-height: 1.5;
-    }
+.service-card h3 {
+    margin-bottom: 10px;
+}
 
-    .brands {
-      background: #f4f8fd;
-      text-align: center;
-    }
+/* MARCAS */
 
-    .brand-list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 55px;
-      flex-wrap: wrap;
-      font-size: 25px;
-      font-weight: 800;
-      color: #111;
-    }
+.brands {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-weight: 700;
+    color: #444;
+}
 
-    .why {
-      display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      padding: 0;
-    }
+/* WHY */
 
-    .why-text {
-      background: linear-gradient(135deg, #061d3a, #004aad);
-      color: white;
-      padding: 70px 7%;
-    }
+.why {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-    .why-text h2 {
-      font-size: 28px;
-      margin-bottom: 28px;
-      text-transform: uppercase;
-    }
+.why-text {
+    background: linear-gradient(135deg, #061b3a, #003f8c);
+    color: white;
+    padding: 60px;
+}
 
-    .why-text ul {
-      list-style: none;
-    }
+.why-text ul {
+    margin-top: 20px;
+}
 
-    .why-text li {
-      margin-bottom: 18px;
-      line-height: 1.5;
-      font-size: 16px;
-    }
+.why-text li {
+    margin-bottom: 10px;
+}
 
-    .why-text li::before {
-      content: "✓";
-      color: #5db7ff;
-      font-weight: 800;
-      margin-right: 12px;
-    }
+.why-img {
+    background: url('img/taller-mercedes.jpg');
+    background-size: cover;
+}
 
-    .why-img {
-      background: url("hero-taller.jpg") center/cover no-repeat;
-      min-height: 420px;
-    }
+/* CONTACTO */
 
-    .contact {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 35px;
-      background: white;
-    }
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
 
-    .contact-card {
-      border-left: 1px solid #dce5f0;
-      padding: 20px 25px;
-    }
+.contact div {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
 
-    .contact-card h3 {
-      font-size: 16px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      color: #071a33;
-    }
+/* FOOTER */
 
-    .contact-card p {
-      line-height: 1.7;
-      color: #333;
-    }
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a1f44;
+    color: white;
+    margin-top: 40px;
+}
 
-    .small-btn {
-      display: inline-block;
-      margin-top: 16px;
-      background: #004aad;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 3px;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    footer {
-      background: #061d3a;
-      color: white;
-      text-align: center;
-      padding: 26px 20px;
-      font-size: 13px;
-    }
-
-    @media (max-width: 900px) {
-      header {
-        flex-direction: column;
-        gap: 18px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero h1 span {
-        font-size: 42px;
-      }
-
-      .services,
-      .why,
-      .contact {
-        grid-template-columns: 1fr;
-      }
-
-      .service {
-        border-right: none;
-        border-bottom: 1px solid #dde6f2;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <strong>STAR TECH<br>AUTO REPAIR</strong>
-    <span>EDUARDO ROMÁN</span>
-  </div>
+<!-- NAV -->
 
-  <nav>
-    <a href="#">INICIO</a>
-    <a href="#servicios">SERVICIOS</a>
-    <a href="#marcas">MARCAS</a>
-    <a href="#contacto">CONTACTO</a>
-  </nav>
+<div class="navbar">
+    <div class="logo">STAR TECH AUTO REPAIR</div>
 
-  <a class="whatsapp-top" href="https://wa.me/56966679318">WhatsApp</a>
-</header>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Especialistas en <span>Mercedes-Benz</span></h1>
-    <p>Diagnóstico preciso, reparación profesional y atención personalizada en Concón.</p>
-    <p>Ahora también atendemos Chrysler, Dodge, Jeep y RAM.</p>
-    <a class="btn" href="https://wa.me/56966679318">Agendar por WhatsApp</a>
-  </div>
-</section>
-
-<section id="servicios">
-  <h2 class="section-title">Servicios</h2>
-
-  <div class="services">
-    <div class="service">
-      <div class="icon">💻</div>
-      <h3>Diagnóstico computarizado</h3>
-      <p>Scanner y revisión técnica para detectar fallas con precisión.</p>
+    <div class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Marcas</a>
+        <a href="#">Contacto</a>
     </div>
 
-    <div class="service">
-      <div class="icon">🛠️</div>
-      <h3>Mantención preventiva</h3>
-      <p>Cambio de aceite, filtros, revisión general y pauta de mantenimiento.</p>
+    <a href="https://wa.me/56966679318" class="btn-whatsapp">WhatsApp</a>
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Especialistas en Mercedes-Benz</h1>
+        <p>Diagnóstico preciso, reparación profesional y atención personalizada.</p>
+
+        <a href="https://wa.me/56966679318" class="btn-primary">
+            Agendar por WhatsApp
+        </a>
+    </div>
+</div>
+
+<!-- SERVICIOS -->
+
+<div class="section">
+    <div class="section-title">Servicios</div>
+
+    <div class="services">
+        <div class="service-card">
+            <h3>Diagnóstico Computarizado</h3>
+            <p>Equipos de última generación.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Mantención</h3>
+            <p>Alarga la vida de tu vehículo.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Motor</h3>
+            <p>Reparaciones completas.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Transmisión</h3>
+            <p>Cajas automáticas y manuales.</p>
+        </div>
+    </div>
+</div>
+
+<!-- MARCAS -->
+
+<div class="section">
+    <div class="section-title">Marcas</div>
+
+    <div class="brands">
+        <div>Mercedes-Benz</div>
+        <div>Chrysler</div>
+        <div>Dodge</div>
+        <div>Jeep</div>
+        <div>RAM</div>
+    </div>
+</div>
+
+<!-- WHY -->
+
+<div class="why">
+    <div class="why-text">
+        <h2>¿Por qué elegirnos?</h2>
+        <ul>
+            <li>Especialistas en Mercedes-Benz</li>
+            <li>Diagnóstico real</li>
+            <li>Tecnología avanzada</li>
+            <li>Repuestos de calidad</li>
+        </ul>
     </div>
 
-    <div class="service">
-      <div class="icon">⚙️</div>
-      <h3>Reparación de motor</h3>
-      <p>Soluciones mecánicas para fallas complejas y pérdida de rendimiento.</p>
+    <div class="why-img"></div>
+</div>
+
+<!-- CONTACTO -->
+
+<div class="section">
+    <div class="section-title">Contacto</div>
+
+    <div class="contact">
+        <div>
+            <h3>Ubicación</h3>
+            <p>Concón, Región de Valparaíso</p>
+        </div>
+
+        <div>
+            <h3>Teléfono</h3>
+            <p>+56 9 6667 9318</p>
+        </div>
+
+        <div>
+            <h3>Email</h3>
+            <p>contacto@startech.cl</p>
+        </div>
     </div>
+</div>
 
-    <div class="service">
-      <div class="icon">🔩</div>
-      <h3>Transmisiones</h3>
-      <p>Revisión y reparación de cajas automáticas y sistemas asociados.</p>
-    </div>
+<!-- FOOTER -->
 
-    <div class="service">
-      <div class="icon">⚡</div>
-      <h3>Sistema eléctrico</h3>
-      <p>Diagnóstico de módulos, sensores, cableado y fallas electrónicas.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🛞</div>
-      <h3>Frenos y suspensión</h3>
-      <p>Seguridad, estabilidad y confort para una conducción confiable.</p>
-    </div>
-  </div>
-</section>
-
-<section id="marcas" class="brands">
-  <h2 class="section-title">Marcas que atendemos</h2>
-  <div class="brand-list">
-    <span>Mercedes-Benz</span>
-    <span>Chrysler</span>
-    <span>Dodge</span>
-    <span>Jeep</span>
-    <span>RAM</span>
-  </div>
-</section>
-
-<section class="why">
-  <div class="why-text">
-    <h2>¿Por qué elegir Star Tech Auto Repair?</h2>
-    <ul>
-      <li>Especialización en Mercedes-Benz.</li>
-      <li>Diagnóstico real, sin adivinar fallas.</li>
-      <li>Atención directa y transparente.</li>
-      <li>Experiencia en mecánica automotriz avanzada.</li>
-      <li>Servicio para vehículos premium y marcas del grupo Stellantis.</li>
-    </ul>
-  </div>
-
-  <div class="why-img"></div>
-</section>
-
-<section id="contacto" class="contact">
-  <div class="contact-card">
-    <h3>Ubicación</h3>
-    <p>Concón, Región de Valparaíso.</p>
-  </div>
-
-  <div class="contact-card">
-    <h3>Teléfono / WhatsApp</h3>
-    <p>+56 9 6667 9318</p>
-    <a class="small-btn" href="https://wa.me/56966679318">Escribir por WhatsApp</a>
-  </div>
-
-  <div class="contact-card">
-    <h3>Correo</h3>
-    <p>contacto@startech.cl</p>
-    <a class="small-btn" href="mailto:contacto@startech.cl">Enviar correo</a>
-  </div>
-</section>
-
-<footer>
-  STAR TECH AUTO REPAIR — Eduardo Román Mecánica Automotriz E.I.R.L.
-</footer>
+<div class="footer">
+    © 2026 Star Tech Auto Repair
+</div>
 
 </body>
 </html>

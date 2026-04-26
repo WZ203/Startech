@@ -3,422 +3,415 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Tech Auto Repair | Mercedes-Benz Concón</title>
 
-  <title>Star Tech Auto Repair | Taller Mercedes-Benz en Concón</title>
-
-  <meta name="description" content="Taller mecánico especializado en Mercedes-Benz, Chrysler, Dodge, Jeep y RAM en Concón. Diagnóstico computarizado, mantención, motor y transmisión.">
-  <meta name="keywords" content="taller mercedes concón, star tech auto repair, taller mecánico concón, chrysler dodge jeep ram">
-  <meta name="author" content="Star Tech Auto Repair">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --azul: #06265c;
-      --azul2: #004aad;
-      --azul3: #0074ff;
-      --negro: #07111f;
-      --gris: #f4f7fb;
-      --texto: #1e293b;
-      --blanco: #ffffff;
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;color:#10213d;background:#fff}
+    a{text-decoration:none}
+
+    :root{
+      --blue:#004aad;
+      --dark:#071f42;
+      --light:#f5f8fc;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    header{
+      height:135px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 5%;
+      background:#fff;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .logo{
+      line-height:1.05;
+      color:#10284f;
+      font-weight:900;
+      letter-spacing:1px;
     }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: var(--gris);
-      color: var(--texto);
+    .logo-main{
+      font-size:34px;
     }
 
-    a {
-      text-decoration: none;
+    .logo-sub{
+      font-size:18px;
+      letter-spacing:7px;
+      margin-top:8px;
     }
 
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .logo-small{
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:1px;
+      margin-top:4px;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      color: var(--azul);
-      text-transform: uppercase;
+    nav{
+      display:flex;
+      gap:34px;
+      align-items:center;
+      font-size:13px;
+      font-weight:800;
     }
 
-    .logo span {
-      color: var(--azul3);
+    nav a{
+      color:#10213d;
+      padding-bottom:12px;
     }
 
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 26px;
+    nav a.active{
+      color:var(--blue);
+      border-bottom:3px solid var(--blue);
     }
 
-    .menu a {
-      color: #1f2937;
-      font-weight: 700;
-      font-size: 14px;
+    .wa-top{
+      background:var(--blue);
+      color:white;
+      padding:15px 25px;
+      border-radius:4px;
+      font-size:14px;
+      font-weight:800;
     }
 
-    .btn-wa {
-      background: linear-gradient(135deg, var(--azul2), var(--azul3));
-      color: white;
-      padding: 12px 20px;
-      border-radius: 999px;
-      font-weight: 800;
-      box-shadow: 0 10px 25px rgba(0,74,173,0.25);
-    }
-
-    .hero {
-      min-height: 720px;
-      display: flex;
-      align-items: center;
-      padding: 90px 7%;
-      color: white;
+    .hero{
+      min-height:560px;
       background:
-        linear-gradient(90deg, rgba(3,12,30,0.96) 0%, rgba(3,18,45,0.78) 45%, rgba(3,18,45,0.25) 100%),
-        url('hero-taller.jpg');
-      background-size: cover;
-      background-position: center;
+        linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35),rgba(0,0,0,.05)),
+        url("hero-taller.jpg");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:0 5%;
+      color:white;
     }
 
-    .hero-content {
-      max-width: 720px;
+    .hero-content{
+      max-width:580px;
     }
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+    .hero h1{
+      font-size:39px;
+      line-height:1.15;
+      font-weight:900;
+      margin-bottom:20px;
+      text-transform:uppercase;
     }
 
-    .hero h1 {
-      font-size: clamp(42px, 6vw, 74px);
-      line-height: 0.98;
-      font-weight: 900;
-      margin-bottom: 24px;
+    .hero h1 span{
+      display:block;
+      font-size:56px;
     }
 
-    .hero h1 span {
-      color: #59a5ff;
+    .hero p{
+      font-size:20px;
+      font-weight:700;
+      line-height:1.6;
+      margin-bottom:22px;
     }
 
-    .hero p {
-      font-size: 20px;
-      line-height: 1.6;
-      color: #dbeafe;
-      max-width: 640px;
-      margin-bottom: 32px;
+    .btn{
+      display:inline-block;
+      background:var(--blue);
+      color:white;
+      padding:17px 30px;
+      border-radius:4px;
+      font-weight:900;
+      font-size:15px;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+    section{
+      padding:36px 5%;
     }
 
-    .btn-primary,
-    .btn-secondary {
-      display: inline-block;
-      padding: 16px 26px;
-      border-radius: 12px;
-      font-weight: 900;
+    .title{
+      text-align:center;
+      color:var(--blue);
+      font-size:27px;
+      font-weight:900;
+      text-transform:uppercase;
+      margin-bottom:10px;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--azul3), var(--azul2));
-      color: white;
-      box-shadow: 0 16px 35px rgba(0,116,255,0.28);
+    .underline{
+      width:58px;
+      height:3px;
+      background:var(--blue);
+      margin:0 auto 30px;
     }
 
-    .btn-secondary {
-      color: white;
-      border: 1px solid rgba(255,255,255,0.35);
-      background: rgba(255,255,255,0.08);
+    .services{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:0;
+      text-align:center;
     }
 
-    .section {
-      padding: 90px 7%;
+    .service{
+      padding:10px 25px;
+      border-right:1px solid #d9e0ea;
     }
 
-    .section-title {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto 50px;
+    .service:last-child{border-right:none}
+
+    .icon{
+      font-size:54px;
+      color:var(--blue);
+      margin-bottom:18px;
     }
 
-    .section-title h2 {
-      font-size: clamp(30px, 4vw, 46px);
-      color: var(--azul);
-      font-weight: 900;
-      margin-bottom: 14px;
+    .service h3{
+      font-size:15px;
+      color:#10213d;
+      font-weight:900;
+      text-transform:uppercase;
+      min-height:44px;
     }
 
-    .section-title p {
-      color: #64748b;
-      font-size: 17px;
-      line-height: 1.6;
+    .service p{
+      font-size:13px;
+      line-height:1.5;
+      margin-top:10px;
+      color:#334155;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+    .brands-section{
+      background:#f6f9fd;
+      padding-top:34px;
+      padding-bottom:42px;
     }
 
-    .card {
-      background: white;
-      padding: 32px;
-      border-radius: 22px;
-      box-shadow: 0 14px 35px rgba(15,23,42,0.08);
-      border: 1px solid rgba(15,23,42,0.06);
-      transition: transform .2s ease, box-shadow .2s ease;
+    .brands{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      align-items:center;
+      text-align:center;
+      gap:0;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 45px rgba(15,23,42,0.13);
+    .brand{
+      min-height:90px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-right:1px solid #d5dde8;
+      font-size:30px;
+      font-weight:900;
+      color:#111;
     }
 
-    .card .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--azul2), var(--azul3));
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      margin-bottom: 20px;
+    .brand:last-child{border-right:none}
+
+    .brand.mercedes{
+      font-family:Georgia,serif;
+      font-size:25px;
+      font-weight:400;
     }
 
-    .card h3 {
-      color: var(--azul);
-      font-size: 20px;
-      margin-bottom: 12px;
-      font-weight: 900;
+    .brand.chrysler{
+      letter-spacing:6px;
+      font-size:21px;
     }
 
-    .card p {
-      color: #64748b;
-      line-height: 1.6;
-      font-size: 15px;
+    .brand.dodge{
+      color:#777;
+      font-size:28px;
+      font-style:italic;
     }
 
-    .brands-box {
-      background: var(--negro);
-      color: white;
-      border-radius: 28px;
-      padding: 50px;
-      box-shadow: 0 18px 45px rgba(7,17,31,0.22);
+    .brand.jeep{
+      font-size:48px;
     }
 
-    .brands {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-      text-align: center;
+    .brand.ram{
+      font-size:28px;
     }
 
-    .brands div {
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 16px;
-      padding: 20px 10px;
-      font-weight: 900;
-      background: rgba(255,255,255,0.05);
+    .why{
+      display:grid;
+      grid-template-columns:43% 57%;
+      padding:0;
     }
 
-    .why {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 560px;
-      background: white;
+    .why-text{
+      background:linear-gradient(135deg,#061b3c,#003d84);
+      color:white;
+      padding:55px 5vw;
     }
 
-    .why-text {
-      background: linear-gradient(135deg, #061b3a, #003f8c);
-      color: white;
-      padding: 80px 7%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .why-text h2{
+      font-size:26px;
+      line-height:1.15;
+      text-transform:uppercase;
+      margin-bottom:26px;
+      font-weight:900;
     }
 
-    .why-text h2 {
-      font-size: 42px;
-      font-weight: 900;
-      margin-bottom: 25px;
+    .why-text h2:after{
+      content:"";
+      display:block;
+      width:60px;
+      height:3px;
+      background:#1d9bff;
+      margin-top:13px;
     }
 
-    .why-text p {
-      color: #dbeafe;
-      line-height: 1.7;
-      margin-bottom: 28px;
-      font-size: 17px;
+    .why-text ul{
+      list-style:none;
+      display:grid;
+      gap:21px;
+      font-size:16px;
+      font-weight:700;
     }
 
-    .why-text ul {
-      list-style: none;
-      display: grid;
-      gap: 14px;
+    .why-text li:before{
+      content:"✓";
+      color:#18a6ff;
+      border:2px solid #18a6ff;
+      border-radius:50%;
+      width:18px;
+      height:18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin-right:15px;
+      font-size:12px;
     }
 
-    .why-text li {
-      font-weight: 700;
-      background: rgba(255,255,255,0.09);
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.14);
+    .why-img{
+      background:url("taller-mercedes.jpg");
+      background-size:cover;
+      background-position:center;
+      min-height:360px;
     }
 
-    .why-img {
-      background:
-        linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0)),
-        url('taller-mercedes.jpg');
-      background-size: cover;
-      background-position: center;
-      min-height: 560px;
+    .contact{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:0;
+      padding-top:36px;
+      padding-bottom:28px;
     }
 
-    .contact {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    .contact-card{
+      padding:0 45px;
+      min-height:135px;
+      border-right:1px solid #d8dee8;
     }
 
-    .contact-card {
-      background: white;
-      padding: 32px;
-      border-radius: 22px;
-      box-shadow: 0 14px 35px rgba(15,23,42,0.08);
-      text-align: center;
+    .contact-card:last-child{border-right:none}
+
+    .contact-card h3{
+      color:#10213d;
+      font-size:15px;
+      font-weight:900;
+      text-transform:uppercase;
+      margin-bottom:8px;
     }
 
-    .contact-card h3 {
-      color: var(--azul);
-      font-size: 20px;
-      font-weight: 900;
-      margin-bottom: 10px;
+    .contact-card p{
+      font-size:14px;
+      line-height:1.5;
+      margin-bottom:18px;
     }
 
-    .contact-card p,
-    .contact-card a {
-      color: #475569;
-      font-weight: 600;
+    .small-btn{
+      display:inline-block;
+      background:var(--blue);
+      color:white;
+      padding:11px 34px;
+      border-radius:3px;
+      font-size:12px;
+      font-weight:900;
+      text-transform:uppercase;
     }
 
-    .final-cta {
-      margin-top: 45px;
-      text-align: center;
+    footer{
+      background:#061f42;
+      color:white;
+      text-align:center;
+      padding:25px 5%;
+      font-size:13px;
+      line-height:1.8;
     }
 
-    .footer {
-      background: #061225;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 28px 7%;
-      font-size: 14px;
-    }
-
-    @media (max-width: 950px) {
-      .navbar {
-        flex-direction: column;
-        gap: 16px;
+    @media(max-width:1000px){
+      header{
+        height:auto;
+        flex-direction:column;
+        gap:20px;
+        padding:24px 5%;
       }
 
-      .menu {
-        flex-wrap: wrap;
-        justify-content: center;
+      nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
       }
 
-      .services {
-        grid-template-columns: repeat(2, 1fr);
+      .services{
+        grid-template-columns:repeat(2,1fr);
+        gap:25px;
       }
 
-      .brands {
-        grid-template-columns: repeat(2, 1fr);
+      .service{
+        border-right:none;
+        border-bottom:1px solid #d9e0ea;
       }
 
-      .why {
-        grid-template-columns: 1fr;
+      .brands{
+        grid-template-columns:1fr;
       }
 
-      .contact {
-        grid-template-columns: 1fr;
+      .brand{
+        border-right:none;
+        border-bottom:1px solid #d5dde8;
+      }
+
+      .why{
+        grid-template-columns:1fr;
+      }
+
+      .contact{
+        grid-template-columns:1fr;
+        gap:25px;
+      }
+
+      .contact-card{
+        border-right:none;
+        border-bottom:1px solid #d8dee8;
+        padding:25px;
+        text-align:center;
       }
     }
 
-    @media (max-width: 600px) {
-      .navbar {
-        padding: 16px 5%;
+    @media(max-width:600px){
+      .logo-main{font-size:27px}
+      .logo-sub{font-size:15px}
+      .hero{
+        min-height:560px;
+        background-position:center;
       }
 
-      .logo {
-        font-size: 18px;
+      .hero h1{
+        font-size:28px;
       }
 
-      .menu a {
-        font-size: 13px;
+      .hero h1 span{
+        font-size:39px;
       }
 
-      .hero {
-        min-height: 680px;
-        padding: 80px 5%;
-        background-position: center;
+      .hero p{
+        font-size:16px;
       }
 
-      .hero p {
-        font-size: 17px;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .brands-box {
-        padding: 30px 20px;
-      }
-
-      .brands {
-        grid-template-columns: 1fr;
-      }
-
-      .why-text {
-        padding: 60px 5%;
-      }
-
-      .why-text h2 {
-        font-size: 32px;
+      .services{
+        grid-template-columns:1fr;
       }
     }
   </style>
@@ -426,157 +419,132 @@
 
 <body>
 
-  <header class="navbar">
-    <div class="logo">STAR TECH <span>AUTO REPAIR</span></div>
+<header>
+  <div class="logo">
+    <div class="logo-main">STAR TECH<br>AUTO REPAIR</div>
+    <div class="logo-sub">EDUARDO ROMAN</div>
+    <div class="logo-small">Mecánica Automotriz E.I.R.L.</div>
+  </div>
 
-    <nav class="menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#marcas">Marcas</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <nav>
+    <a href="#inicio" class="active">INICIO</a>
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#marcas">MARCAS</a>
+    <a href="#nosotros">SOBRE NOSOTROS</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
 
-    <a class="btn-wa" href="https://wa.me/56966679318" target="_blank">
-      WhatsApp
-    </a>
-  </header>
+  <a class="wa-top" href="https://wa.me/56966679318" target="_blank">☏ WhatsApp</a>
+</header>
 
-  <main>
+<main>
 
-    <section class="hero" id="inicio">
-      <div class="hero-content">
-        <div class="eyebrow">Taller especializado en Concón</div>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Especialistas en <span>Mercedes-Benz</span></h1>
+      <p>Diagnóstico preciso, reparación profesional y atención personalizada.</p>
+      <p>Ahora también atendemos Chrysler, Dodge, Jeep y RAM.</p>
+      <a class="btn" href="https://wa.me/56966679318" target="_blank">☏ AGENDAR POR WHATSAPP</a>
+    </div>
+  </section>
 
-        <h1>Especialistas en <span>Mercedes-Benz</span></h1>
+  <section id="servicios">
+    <h2 class="title">Servicios</h2>
+    <div class="underline"></div>
 
-        <p>
-          Diagnóstico computarizado, mantención y reparación profesional para vehículos Mercedes-Benz,
-          Chrysler, Dodge, Jeep y RAM.
-        </p>
-
-        <div class="hero-actions">
-          <a href="https://wa.me/56966679318" target="_blank" class="btn-primary">
-            Agendar por WhatsApp
-          </a>
-
-          <a href="#servicios" class="btn-secondary">
-            Ver servicios
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="servicios">
-      <div class="section-title">
-        <h2>Servicios principales</h2>
-        <p>
-          Atención técnica especializada, con enfoque en diagnóstico real, mantenciones preventivas y reparación responsable.
-        </p>
+    <div class="services">
+      <div class="service">
+        <div class="icon">▣</div>
+        <h3>Diagnóstico Computarizado</h3>
+        <p>Equipos de última generación para un diagnóstico preciso.</p>
       </div>
 
-      <div class="services">
-        <div class="card">
-          <div class="icon">⚙</div>
-          <h3>Diagnóstico computarizado</h3>
-          <p>Lectura de fallas, revisión electrónica y evaluación técnica del vehículo.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🛠</div>
-          <h3>Mantención preventiva</h3>
-          <p>Cambios de aceite, filtros, frenos, fluidos y revisión general.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🚗</div>
-          <h3>Motor y tren motriz</h3>
-          <p>Revisión de motor, sensores, inyección, transmisión y componentes críticos.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🔍</div>
-          <h3>Precompra y revisión</h3>
-          <p>Inspección técnica para evaluar el estado real antes de comprar un vehículo.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="marcas">
-      <div class="section-title">
-        <h2>Marcas que atendemos</h2>
-        <p>
-          Especialización principal en Mercedes-Benz y atención técnica para marcas del grupo Chrysler.
-        </p>
+      <div class="service">
+        <div class="icon">⚒</div>
+        <h3>Mantención Preventiva</h3>
+        <p>Alargamos la vida útil de tu vehículo.</p>
       </div>
 
-      <div class="brands-box">
-        <div class="brands">
-          <div>Mercedes-Benz</div>
-          <div>Chrysler</div>
-          <div>Dodge</div>
-          <div>Jeep</div>
-          <div>RAM</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="why">
-      <div class="why-text">
-        <h2>Atención técnica seria y especializada</h2>
-
-        <p>
-          En Star Tech Auto Repair trabajamos con enfoque profesional, priorizando diagnóstico,
-          transparencia y soluciones bien ejecutadas.
-        </p>
-
-        <ul>
-          <li>Especialistas en Mercedes-Benz</li>
-          <li>Diagnóstico antes de cambiar piezas</li>
-          <li>Atención directa y personalizada</li>
-          <li>Revisión de sistemas electrónicos y mecánicos</li>
-        </ul>
+      <div class="service">
+        <div class="icon">⚙</div>
+        <h3>Reparación de Motor</h3>
+        <p>Soluciones efectivas para cada problema.</p>
       </div>
 
-      <div class="why-img"></div>
-    </section>
-
-    <section class="section" id="contacto">
-      <div class="section-title">
-        <h2>Contacto</h2>
-        <p>
-          Escríbenos para coordinar una revisión o agendar atención.
-        </p>
+      <div class="service">
+        <div class="icon">♙</div>
+        <h3>Transmisiones</h3>
+        <p>Reparación y mantenimiento de cajas automáticas y manuales.</p>
       </div>
 
-      <div class="contact">
-        <div class="contact-card">
-          <h3>Ubicación</h3>
-          <p>Concón, Región de Valparaíso</p>
-        </div>
-
-        <div class="contact-card">
-          <h3>Teléfono</h3>
-          <p><a href="tel:+56966679318">+56 9 6667 9318</a></p>
-        </div>
-
-        <div class="contact-card">
-          <h3>Email</h3>
-          <p><a href="mailto:contacto@startech.cl">contacto@startech.cl</a></p>
-        </div>
+      <div class="service">
+        <div class="icon">ϟ</div>
+        <h3>Sistema Eléctrico y Electrónico</h3>
+        <p>Revisión y reparación de sistemas eléctricos y electrónicos.</p>
       </div>
 
-      <div class="final-cta">
-        <a href="https://wa.me/56966679318" target="_blank" class="btn-primary">
-          Contactar ahora por WhatsApp
-        </a>
+      <div class="service">
+        <div class="icon">◉</div>
+        <h3>Frenos y Suspensión</h3>
+        <p>Seguridad y estabilidad en cada kilómetro.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <section class="brands-section" id="marcas">
+    <h2 class="title">Marcas que atendemos</h2>
+    <div class="underline"></div>
 
-  <footer class="footer">
-    © 2026 Star Tech Auto Repair · Taller mecánico especializado en Concón
-  </footer>
+    <div class="brands">
+      <div class="brand mercedes">Mercedes-Benz</div>
+      <div class="brand chrysler">CHRYSLER</div>
+      <div class="brand dodge">DODGE</div>
+      <div class="brand jeep">Jeep</div>
+      <div class="brand ram">RAM</div>
+    </div>
+  </section>
+
+  <section class="why" id="nosotros">
+    <div class="why-text">
+      <h2>¿Por qué elegir<br>Star Tech Auto Repair?</h2>
+      <ul>
+        <li>Especialización en Mercedes-Benz.</li>
+        <li>Diagnóstico real, sin adivinar fallas.</li>
+        <li>Taller equipado con tecnología avanzada.</li>
+        <li>Repuestos de calidad y garantía en nuestro trabajo.</li>
+        <li>Atención personalizada y transparente.</li>
+      </ul>
+    </div>
+
+    <div class="why-img"></div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="contact-card">
+      <h3>Ubicación</h3>
+      <p>Concón, Región de Valparaíso<br>Sector Industrial / Comercial</p>
+      <a class="small-btn" href="#" target="_blank">Ver en Google Maps</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>Teléfono / WhatsApp</h3>
+      <p>+56 9 6667 9318</p>
+      <a class="small-btn" href="https://wa.me/56966679318" target="_blank">Escribir por WhatsApp</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>Correo</h3>
+      <p>contacto@startech.cl</p>
+      <a class="small-btn" href="mailto:contacto@startech.cl">Enviar correo</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>STAR TECH AUTO REPAIR – Eduardo Román Mecánica Automotriz E.I.R.L.</p>
+  <p>© 2026 Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>

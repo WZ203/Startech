@@ -17,104 +17,134 @@
   <meta property="og:url" content="https://startechauto.cl/">
   <meta property="og:image" content="https://startechauto.cl/hero-taller.jpg">
 
-  <meta name="theme-color" content="#004aad">
+  <meta name="theme-color" content="#05070b">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.ico">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family:'Montserrat',sans-serif;color:#10213d;background:#fff}
+    body{font-family:'Montserrat',sans-serif;color:#e8edf7;background:#05070b}
     a{text-decoration:none}
 
     :root{
-      --blue:#004aad;
-      --dark:#071f42;
+      --blue:#1d6fff;
+      --blue-dark:#004aad;
+      --dark:#05070b;
+      --dark-2:#0a1020;
+      --silver:#cfd8e6;
+      --muted:#8d9ab0;
+      --line:rgba(255,255,255,.12);
       --light:#f5f8fc;
     }
 
     header{
-      height:135px;
+      min-height:118px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       padding:0 5%;
-      background:#fff;
-      position:relative;
-      z-index:10;
+      background:rgba(5,7,11,.94);
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(16px);
     }
 
     .logo{
       line-height:1.05;
-      color:#10284f;
+      color:white;
       font-weight:900;
       letter-spacing:1px;
     }
 
     .logo-main{
-      font-size:34px;
+      font-size:31px;
+      letter-spacing:1.4px;
     }
 
     .logo-sub{
-      font-size:18px;
+      font-size:15px;
       letter-spacing:7px;
       margin-top:8px;
+      color:var(--silver);
+      font-weight:500;
     }
 
     .logo-small{
-      font-size:13px;
-      font-weight:600;
+      font-size:12px;
+      font-weight:400;
       letter-spacing:1px;
       margin-top:4px;
+      color:var(--muted);
     }
 
     nav{
       display:flex;
-      gap:34px;
+      gap:28px;
       align-items:center;
-      font-size:13px;
-      font-weight:800;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:1px;
+      text-transform:uppercase;
     }
 
     nav a{
-      color:#10213d;
-      padding-bottom:12px;
-      transition:.2s ease;
+      color:#cbd5e1;
+      padding-bottom:10px;
+      transition:.25s ease;
+      position:relative;
     }
 
     nav a:hover{
-      color:var(--blue);
+      color:white;
     }
 
     nav a.active{
-      color:var(--blue);
-      border-bottom:3px solid var(--blue);
+      color:white;
+    }
+
+    nav a.active:after,
+    nav a:hover:after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height:2px;
+      background:linear-gradient(90deg,transparent,var(--blue),transparent);
     }
 
     .wa-top{
-      background:var(--blue);
+      background:transparent;
       color:white;
-      padding:15px 25px;
-      border-radius:4px;
-      font-size:14px;
+      padding:14px 24px;
+      border-radius:2px;
+      border:1px solid rgba(29,111,255,.75);
+      font-size:13px;
       font-weight:800;
-      transition:.2s ease;
+      letter-spacing:.6px;
+      transition:.25s ease;
     }
 
     .wa-top:hover,
     .btn:hover,
     .small-btn:hover{
-      filter:brightness(.92);
-      transform:translateY(-1px);
+      background:var(--blue);
+      color:white;
+      transform:translateY(-2px);
+      box-shadow:0 12px 30px rgba(29,111,255,.25);
     }
 
     .hero{
-      min-height:560px;
+      min-height:660px;
       background:
-        linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35),rgba(0,0,0,.05)),
+        linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.58),rgba(0,0,0,.16)),
+        linear-gradient(180deg,rgba(5,7,11,.18),rgba(5,7,11,.85)),
         url("hero-taller.jpg");
       background-color:#071f42;
       background-size:cover;
@@ -123,61 +153,112 @@
       align-items:center;
       padding:0 5%;
       color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 18% 50%,rgba(29,111,255,.22),transparent 36%);
+      pointer-events:none;
     }
 
     .hero-content{
-      max-width:580px;
+      max-width:720px;
+      position:relative;
+      z-index:2;
+    }
+
+    .eyebrow{
+      color:#9fbfff;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:18px;
     }
 
     .hero h1{
-      font-size:39px;
-      line-height:1.15;
-      font-weight:900;
-      margin-bottom:20px;
+      font-size:42px;
+      line-height:1.05;
+      font-weight:300;
+      margin-bottom:22px;
       text-transform:uppercase;
+      letter-spacing:1px;
     }
 
     .hero h1 span{
       display:block;
-      font-size:56px;
+      font-size:70px;
+      font-weight:900;
+      letter-spacing:-1px;
     }
 
     .hero p{
-      font-size:20px;
-      font-weight:700;
-      line-height:1.6;
-      margin-bottom:22px;
+      font-size:19px;
+      font-weight:400;
+      line-height:1.7;
+      margin-bottom:16px;
+      color:#dbe5f5;
+      max-width:620px;
     }
 
     .btn{
       display:inline-block;
       background:var(--blue);
       color:white;
-      padding:17px 30px;
-      border-radius:4px;
+      padding:17px 32px;
+      border-radius:2px;
       font-weight:900;
-      font-size:15px;
-      transition:.2s ease;
+      font-size:14px;
+      letter-spacing:.7px;
+      transition:.25s ease;
+      margin-top:12px;
     }
 
     section{
-      padding:36px 5%;
+      padding:64px 5%;
     }
 
     .title{
       text-align:center;
-      color:var(--blue);
+      color:#9fbfff;
       font-size:27px;
-      font-weight:900;
+      font-weight:600;
+      letter-spacing:2px;
       text-transform:uppercase;
       margin-bottom:10px;
     }
 
+    .subtitle{
+      text-align:center;
+      color:#e5eaf4;
+      font-size:28px;
+      font-weight:300;
+      margin-bottom:38px;
+    }
+
     .underline{
-      width:58px;
-      height:3px;
-      background:var(--blue);
-      margin:0 auto 30px;
+      width:68px;
+      height:2px;
+      background:linear-gradient(90deg,transparent,var(--blue),transparent);
+      margin:0 auto 34px;
+    }
+
+    #servicios{
+      background:#f7f9fd;
+      color:#10213d;
+    }
+
+    #servicios .title{
+      color:var(--blue-dark);
+      font-weight:800;
+    }
+
+    #servicios .underline{
+      background:var(--blue-dark);
     }
 
     .services{
@@ -185,23 +266,32 @@
       grid-template-columns:repeat(6,1fr);
       gap:0;
       text-align:center;
+      background:white;
+      border:1px solid #dce4ef;
+      box-shadow:0 18px 40px rgba(7,31,66,.08);
     }
 
     .service{
-      padding:10px 25px;
+      padding:30px 22px;
       border-right:1px solid #d9e0ea;
+      transition:.25s ease;
+    }
+
+    .service:hover{
+      transform:translateY(-4px);
+      background:#f9fbff;
     }
 
     .service:last-child{border-right:none}
 
     .icon{
-      font-size:54px;
-      color:var(--blue);
+      font-size:46px;
+      color:var(--blue-dark);
       margin-bottom:18px;
     }
 
     .service h3{
-      font-size:15px;
+      font-size:14px;
       color:#10213d;
       font-weight:900;
       text-transform:uppercase;
@@ -216,101 +306,141 @@
     }
 
     .brands-section{
-      background:#f6f9fd;
-      padding-top:34px;
-      padding-bottom:42px;
+      background:
+        radial-gradient(circle at center top,rgba(29,111,255,.24),transparent 35%),
+        linear-gradient(180deg,#02050a,#071f42);
+      padding-top:72px;
+      padding-bottom:78px;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .brands-section:before{
+      content:"";
+      display:block;
+      height:1px;
+      width:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);
+      margin-bottom:42px;
+    }
+
+    .brands-section .title{
+      color:#9fbfff;
+      font-weight:500;
+      letter-spacing:3px;
+      margin-bottom:8px;
+    }
+
+    .brands-section .underline{
+      display:none;
+    }
+
+    .brands-lead{
+      text-align:center;
+      color:white;
+      font-size:30px;
+      font-weight:300;
+      margin-bottom:46px;
+      letter-spacing:.5px;
     }
 
     .brands{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
+      display:flex;
+      justify-content:space-between;
       align-items:center;
-      text-align:center;
       gap:0;
+      max-width:1180px;
+      margin:0 auto;
+      border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.035);
+      backdrop-filter:blur(10px);
     }
 
     .brand{
-      min-height:90px;
+      min-height:130px;
+      flex:1;
       display:flex;
       align-items:center;
       justify-content:center;
-      border-right:1px solid #d5dde8;
-      font-size:30px;
-      font-weight:900;
-      color:#111;
+      position:relative;
+      padding:28px 22px;
     }
 
-    .brand:last-child{border-right:none}
-
-    .brand.mercedes{
-      font-family:Georgia,serif;
-      font-size:25px;
-      font-weight:400;
+    .brand:not(:last-child)::after{
+      content:"";
+      position:absolute;
+      right:0;
+      top:24%;
+      height:52%;
+      width:1px;
+      background:rgba(255,255,255,.14);
     }
 
-    .brand.chrysler{
-      letter-spacing:6px;
-      font-size:21px;
+    .brand img{
+      max-width:145px;
+      max-height:62px;
+      object-fit:contain;
+      filter:grayscale(100%) brightness(1.65);
+      opacity:.86;
+      transition:.3s ease;
     }
 
-    .brand.dodge{
-      color:#777;
-      font-size:28px;
-      font-style:italic;
-    }
-
-    .brand.jeep{
-      font-size:48px;
-    }
-
-    .brand.ram{
-      font-size:28px;
+    .brand img:hover{
+      filter:grayscale(0%) brightness(1);
+      opacity:1;
+      transform:scale(1.08);
     }
 
     .why{
       display:grid;
       grid-template-columns:43% 57%;
       padding:0;
+      background:#05070b;
     }
 
     .why-text{
-      background:linear-gradient(135deg,#061b3c,#003d84);
+      background:
+        radial-gradient(circle at top left,rgba(29,111,255,.24),transparent 34%),
+        linear-gradient(135deg,#05070b,#071f42);
       color:white;
-      padding:55px 5vw;
+      padding:70px 5vw;
     }
 
     .why-text h2{
-      font-size:26px;
+      font-size:30px;
       line-height:1.15;
       text-transform:uppercase;
-      margin-bottom:26px;
-      font-weight:900;
+      margin-bottom:30px;
+      font-weight:600;
+      letter-spacing:1px;
     }
 
     .why-text h2:after{
       content:"";
       display:block;
-      width:60px;
-      height:3px;
-      background:#1d9bff;
-      margin-top:13px;
+      width:70px;
+      height:2px;
+      background:linear-gradient(90deg,var(--blue),transparent);
+      margin-top:16px;
     }
 
     .why-text ul{
       list-style:none;
       display:grid;
-      gap:21px;
+      gap:22px;
       font-size:16px;
-      font-weight:700;
+      font-weight:500;
+      color:#dbe5f5;
     }
 
     .why-text li:before{
       content:"✓";
-      color:#18a6ff;
-      border:2px solid #18a6ff;
+      color:#9fbfff;
+      border:1px solid rgba(159,191,255,.75);
       border-radius:50%;
-      width:18px;
-      height:18px;
+      width:20px;
+      height:20px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -319,17 +449,29 @@
     }
 
     .why-img{
-      background:url("taller-mercedes.jpg");
-      background-color:#dbe4f0;
+      background:
+        linear-gradient(90deg,rgba(5,7,11,.22),rgba(5,7,11,.05)),
+        url("taller-mercedes.jpg");
+      background-color:#0a1020;
       background-size:cover;
       background-position:center;
-      min-height:360px;
+      min-height:430px;
     }
 
     .map-section{
-      background:#fff;
-      padding-top:42px;
-      padding-bottom:42px;
+      background:#f7f9fd;
+      color:#10213d;
+      padding-top:64px;
+      padding-bottom:64px;
+    }
+
+    .map-section .title{
+      color:var(--blue-dark);
+      font-weight:800;
+    }
+
+    .map-section .underline{
+      background:var(--blue-dark);
     }
 
     .map-wrapper{
@@ -339,17 +481,17 @@
       grid-template-columns:38% 62%;
       border:1px solid #d8dee8;
       overflow:hidden;
-      box-shadow:0 12px 30px rgba(7,31,66,.08);
+      box-shadow:0 18px 45px rgba(7,31,66,.12);
       background:#fff;
     }
 
     .map-info{
-      padding:34px;
-      background:#f6f9fd;
+      padding:42px;
+      background:#fff;
     }
 
     .map-info h3{
-      font-size:21px;
+      font-size:22px;
       color:#10213d;
       font-weight:900;
       text-transform:uppercase;
@@ -358,13 +500,13 @@
 
     .map-info p{
       font-size:14px;
-      line-height:1.65;
+      line-height:1.7;
       color:#334155;
       margin-bottom:20px;
     }
 
     .map-frame{
-      min-height:330px;
+      min-height:360px;
       width:100%;
       border:0;
       display:block;
@@ -374,13 +516,15 @@
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:0;
-      padding-top:36px;
-      padding-bottom:28px;
+      padding-top:48px;
+      padding-bottom:44px;
+      background:white;
+      color:#10213d;
     }
 
     .contact-card{
       padding:0 45px;
-      min-height:135px;
+      min-height:145px;
       border-right:1px solid #d8dee8;
     }
 
@@ -398,18 +542,19 @@
       font-size:14px;
       line-height:1.5;
       margin-bottom:18px;
+      color:#334155;
     }
 
     .small-btn{
       display:inline-block;
-      background:var(--blue);
+      background:#071f42;
       color:white;
-      padding:11px 34px;
-      border-radius:3px;
+      padding:12px 32px;
+      border-radius:2px;
       font-size:12px;
       font-weight:900;
       text-transform:uppercase;
-      transition:.2s ease;
+      transition:.25s ease;
     }
 
     .floating-wa{
@@ -426,31 +571,33 @@
       justify-content:center;
       font-size:32px;
       font-weight:900;
-      box-shadow:0 10px 28px rgba(0,0,0,.28);
+      box-shadow:0 10px 28px rgba(0,0,0,.35);
       z-index:999;
-      transition:.2s ease;
+      transition:.25s ease;
     }
 
     .floating-wa:hover{
-      transform:scale(1.06);
+      transform:scale(1.07);
       filter:brightness(.96);
     }
 
     footer{
-      background:#061f42;
-      color:white;
+      background:#05070b;
+      border-top:1px solid rgba(255,255,255,.1);
+      color:#cbd5e1;
       text-align:center;
-      padding:25px 5%;
+      padding:28px 5%;
       font-size:13px;
       line-height:1.8;
     }
 
-    @media(max-width:1000px){
+    @media(max-width:1100px){
       header{
-        height:auto;
+        min-height:auto;
         flex-direction:column;
         gap:20px;
         padding:24px 5%;
+        position:relative;
       }
 
       nav{
@@ -465,22 +612,24 @@
 
       .services{
         grid-template-columns:repeat(2,1fr);
-        gap:25px;
       }
 
       .service{
         border-right:none;
         border-bottom:1px solid #d9e0ea;
-        padding-bottom:28px;
+        padding-bottom:30px;
       }
 
       .brands{
-        grid-template-columns:1fr;
+        flex-wrap:wrap;
       }
 
       .brand{
-        border-right:none;
-        border-bottom:1px solid #d5dde8;
+        flex:1 1 50%;
+      }
+
+      .brand:not(:last-child)::after{
+        display:none;
       }
 
       .why{
@@ -518,9 +667,10 @@
         text-align:center;
       }
 
-      .logo-main{font-size:25px}
+      .logo-main{font-size:24px}
+
       .logo-sub{
-        font-size:13px;
+        font-size:12px;
         letter-spacing:4px;
       }
 
@@ -529,7 +679,7 @@
       }
 
       nav{
-        font-size:11px;
+        font-size:10px;
         gap:12px;
       }
 
@@ -539,17 +689,17 @@
       }
 
       .hero{
-        min-height:535px;
+        min-height:570px;
         background-position:center;
         text-align:left;
       }
 
       .hero h1{
-        font-size:28px;
+        font-size:30px;
       }
 
       .hero h1 span{
-        font-size:39px;
+        font-size:42px;
       }
 
       .hero p{
@@ -561,15 +711,39 @@
       }
 
       .title{
-        font-size:23px;
+        font-size:22px;
+      }
+
+      .subtitle,
+      .brands-lead{
+        font-size:22px;
+      }
+
+      .brand{
+        flex:1 1 100%;
+        min-height:105px;
+        border-bottom:1px solid rgba(255,255,255,.1);
+      }
+
+      .brand img{
+        max-width:140px;
+        max-height:58px;
+      }
+
+      .why-text{
+        padding:48px 7%;
+      }
+
+      .why-text h2{
+        font-size:25px;
       }
 
       .map-info{
-        padding:26px 20px;
+        padding:30px 22px;
       }
 
       .map-frame{
-        min-height:300px;
+        min-height:310px;
       }
 
       .floating-wa{
@@ -608,8 +782,9 @@
 
   <section class="hero" id="inicio">
     <div class="hero-content">
+      <div class="eyebrow">Taller especializado en Concón</div>
       <h1>Especialistas en <span>Mercedes-Benz</span></h1>
-      <p>Diagnóstico preciso, reparación profesional y atención personalizada.</p>
+      <p>Diagnóstico preciso, reparación profesional y atención personalizada para vehículos de alta exigencia.</p>
       <p>Ahora también atendemos Chrysler, Dodge, Jeep y RAM.</p>
       <a class="btn" href="https://wa.me/56966679318" target="_blank" rel="noopener">☏ AGENDAR POR WHATSAPP</a>
     </div>
@@ -660,14 +835,14 @@
 
   <section class="brands-section" id="marcas">
     <h2 class="title">Marcas que atendemos</h2>
-    <div class="underline"></div>
+    <p class="brands-lead">Trabajamos con excelencia</p>
 
     <div class="brands">
-      <div class="brand mercedes">Mercedes-Benz</div>
-      <div class="brand chrysler">CHRYSLER</div>
-      <div class="brand dodge">DODGE</div>
-      <div class="brand jeep">Jeep</div>
-      <div class="brand ram">RAM</div>
+      <div class="brand"><img src="mercedes.png" alt="Mercedes-Benz"></div>
+      <div class="brand"><img src="chrysler.png" alt="Chrysler"></div>
+      <div class="brand"><img src="dodge.png" alt="Dodge"></div>
+      <div class="brand"><img src="jeep.png" alt="Jeep"></div>
+      <div class="brand"><img src="ram.png" alt="RAM"></div>
     </div>
   </section>
 
@@ -748,9 +923,6 @@
   <p>STAR TECH AUTO REPAIR – Eduardo Román Mecánica Automotriz E.I.R.L.</p>
   <p>© 2026 Todos los derechos reservados.</p>
 </footer>
-
-</body>
-</html>
 
 </body>
 </html>

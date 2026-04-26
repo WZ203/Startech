@@ -3,12 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Star Tech Auto Repair | Mercedes-Benz Concón</title>
+
+  <title>Star Tech Auto Repair | Taller Mercedes-Benz en Concón</title>
+  <meta name="description" content="Taller mecánico en Concón especializado en Mercedes-Benz. Diagnóstico computarizado, mantención, reparación de motor, transmisiones, frenos, suspensión y sistema eléctrico. También atendemos Chrysler, Dodge, Jeep y RAM.">
+  <meta name="keywords" content="taller Mercedes Benz Concón, mecánico Mercedes Concón, Star Tech Auto Repair, taller mecánico Concón, Chrysler Dodge Jeep RAM Concón">
+  <meta name="author" content="Star Tech Auto Repair">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://startechauto.cl/">
+
+  <meta property="og:title" content="Star Tech Auto Repair | Taller Mercedes-Benz en Concón">
+  <meta property="og:description" content="Especialistas en Mercedes-Benz. Diagnóstico preciso, reparación profesional y atención personalizada en Concón.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://startechauto.cl/">
+  <meta property="og:image" content="https://startechauto.cl/hero-taller.jpg">
+
+  <meta name="theme-color" content="#004aad">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{font-family:'Montserrat',sans-serif;color:#10213d;background:#fff}
     a{text-decoration:none}
 
@@ -25,6 +43,8 @@
       justify-content:space-between;
       padding:0 5%;
       background:#fff;
+      position:relative;
+      z-index:10;
     }
 
     .logo{
@@ -62,6 +82,11 @@
     nav a{
       color:#10213d;
       padding-bottom:12px;
+      transition:.2s ease;
+    }
+
+    nav a:hover{
+      color:var(--blue);
     }
 
     nav a.active{
@@ -76,6 +101,14 @@
       border-radius:4px;
       font-size:14px;
       font-weight:800;
+      transition:.2s ease;
+    }
+
+    .wa-top:hover,
+    .btn:hover,
+    .small-btn:hover{
+      filter:brightness(.92);
+      transform:translateY(-1px);
     }
 
     .hero{
@@ -83,6 +116,7 @@
       background:
         linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35),rgba(0,0,0,.05)),
         url("hero-taller.jpg");
+      background-color:#071f42;
       background-size:cover;
       background-position:center;
       display:flex;
@@ -123,6 +157,7 @@
       border-radius:4px;
       font-weight:900;
       font-size:15px;
+      transition:.2s ease;
     }
 
     section{
@@ -285,9 +320,54 @@
 
     .why-img{
       background:url("taller-mercedes.jpg");
+      background-color:#dbe4f0;
       background-size:cover;
       background-position:center;
       min-height:360px;
+    }
+
+    .map-section{
+      background:#fff;
+      padding-top:42px;
+      padding-bottom:42px;
+    }
+
+    .map-wrapper{
+      max-width:1180px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:38% 62%;
+      border:1px solid #d8dee8;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(7,31,66,.08);
+      background:#fff;
+    }
+
+    .map-info{
+      padding:34px;
+      background:#f6f9fd;
+    }
+
+    .map-info h3{
+      font-size:21px;
+      color:#10213d;
+      font-weight:900;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .map-info p{
+      font-size:14px;
+      line-height:1.65;
+      color:#334155;
+      margin-bottom:20px;
+    }
+
+    .map-frame{
+      min-height:330px;
+      width:100%;
+      border:0;
+      display:block;
     }
 
     .contact{
@@ -329,6 +409,31 @@
       font-size:12px;
       font-weight:900;
       text-transform:uppercase;
+      transition:.2s ease;
+    }
+
+    .floating-wa{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      background:#25d366;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      font-weight:900;
+      box-shadow:0 10px 28px rgba(0,0,0,.28);
+      z-index:999;
+      transition:.2s ease;
+    }
+
+    .floating-wa:hover{
+      transform:scale(1.06);
+      filter:brightness(.96);
     }
 
     footer{
@@ -354,6 +459,10 @@
         gap:18px;
       }
 
+      nav a{
+        padding-bottom:7px;
+      }
+
       .services{
         grid-template-columns:repeat(2,1fr);
         gap:25px;
@@ -362,6 +471,7 @@
       .service{
         border-right:none;
         border-bottom:1px solid #d9e0ea;
+        padding-bottom:28px;
       }
 
       .brands{
@@ -375,6 +485,14 @@
 
       .why{
         grid-template-columns:1fr;
+      }
+
+      .map-wrapper{
+        grid-template-columns:1fr;
+      }
+
+      .map-info{
+        text-align:center;
       }
 
       .contact{
@@ -391,11 +509,39 @@
     }
 
     @media(max-width:600px){
-      .logo-main{font-size:27px}
-      .logo-sub{font-size:15px}
+      header{
+        padding:18px 5%;
+        gap:15px;
+      }
+
+      .logo{
+        text-align:center;
+      }
+
+      .logo-main{font-size:25px}
+      .logo-sub{
+        font-size:13px;
+        letter-spacing:4px;
+      }
+
+      .logo-small{
+        font-size:11px;
+      }
+
+      nav{
+        font-size:11px;
+        gap:12px;
+      }
+
+      .wa-top{
+        padding:12px 18px;
+        font-size:13px;
+      }
+
       .hero{
-        min-height:560px;
+        min-height:535px;
         background-position:center;
+        text-align:left;
       }
 
       .hero h1{
@@ -412,6 +558,26 @@
 
       .services{
         grid-template-columns:1fr;
+      }
+
+      .title{
+        font-size:23px;
+      }
+
+      .map-info{
+        padding:26px 20px;
+      }
+
+      .map-frame{
+        min-height:300px;
+      }
+
+      .floating-wa{
+        width:56px;
+        height:56px;
+        right:16px;
+        bottom:16px;
+        font-size:28px;
       }
     }
   </style>
@@ -431,10 +597,11 @@
     <a href="#servicios">SERVICIOS</a>
     <a href="#marcas">MARCAS</a>
     <a href="#nosotros">SOBRE NOSOTROS</a>
+    <a href="#ubicacion">UBICACIÓN</a>
     <a href="#contacto">CONTACTO</a>
   </nav>
 
-  <a class="wa-top" href="https://wa.me/56966679318" target="_blank">☏ WhatsApp</a>
+  <a class="wa-top" href="https://wa.me/56966679318" target="_blank" rel="noopener">☏ WhatsApp</a>
 </header>
 
 <main>
@@ -444,7 +611,7 @@
       <h1>Especialistas en <span>Mercedes-Benz</span></h1>
       <p>Diagnóstico preciso, reparación profesional y atención personalizada.</p>
       <p>Ahora también atendemos Chrysler, Dodge, Jeep y RAM.</p>
-      <a class="btn" href="https://wa.me/56966679318" target="_blank">☏ AGENDAR POR WHATSAPP</a>
+      <a class="btn" href="https://wa.me/56966679318" target="_blank" rel="noopener">☏ AGENDAR POR WHATSAPP</a>
     </div>
   </section>
 
@@ -519,32 +686,71 @@
     <div class="why-img"></div>
   </section>
 
+  <section class="map-section" id="ubicacion">
+    <h2 class="title">Ubicación</h2>
+    <div class="underline"></div>
+
+    <div class="map-wrapper">
+      <div class="map-info">
+        <h3>Encuéntranos en Concón</h3>
+        <p>
+          Estamos ubicados en Condominio Altos de la Cantera s/n,
+          Concón, Región de Valparaíso.
+        </p>
+        <p>
+          Agenda tu visita previamente por WhatsApp para coordinar diagnóstico,
+          revisión o mantención de tu vehículo.
+        </p>
+        <a class="small-btn" href="https://www.google.com/maps/search/?api=1&query=Condominio%20Altos%20de%20la%20Cantera%20s%2Fn%20Conc%C3%B3n%2C%202340000%20Valpara%C3%ADso%2C%20Conc%C3%B3n%2C%20Valpara%C3%ADso" target="_blank" rel="noopener">
+          Abrir en Google Maps
+        </a>
+      </div>
+
+      <iframe
+        class="map-frame"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Condominio%20Altos%20de%20la%20Cantera%20s%2Fn%20Conc%C3%B3n%2C%202340000%20Valpara%C3%ADso%2C%20Conc%C3%B3n%2C%20Valpara%C3%ADso&output=embed">
+      </iframe>
+    </div>
+  </section>
+
   <section class="contact" id="contacto">
     <div class="contact-card">
       <h3>Ubicación</h3>
-      <p>Concón, Región de Valparaíso<br>Sector Industrial / Comercial</p>
-      <a class="small-btn" href="#" target="_blank">Ver en Google Maps</a>
+      <p>Condominio Altos de la Cantera s/n<br>Concón, Región de Valparaíso</p>
+      <a class="small-btn" href="https://www.google.com/maps/search/?api=1&query=Condominio%20Altos%20de%20la%20Cantera%20s%2Fn%20Conc%C3%B3n%2C%202340000%20Valpara%C3%ADso%2C%20Conc%C3%B3n%2C%20Valpara%C3%ADso" target="_blank" rel="noopener">
+        Ver en Google Maps
+      </a>
     </div>
 
     <div class="contact-card">
       <h3>Teléfono / WhatsApp</h3>
       <p>+56 9 6667 9318</p>
-      <a class="small-btn" href="https://wa.me/56966679318" target="_blank">Escribir por WhatsApp</a>
+      <a class="small-btn" href="https://wa.me/56966679318" target="_blank" rel="noopener">Escribir por WhatsApp</a>
     </div>
 
     <div class="contact-card">
       <h3>Correo</h3>
-      <p>contacto@startech.cl</p>
-      <a class="small-btn" href="mailto:contacto@startech.cl">Enviar correo</a>
+      <p>contacto@startechauto.cl</p>
+      <a class="small-btn" href="mailto:contacto@startechauto.cl">Enviar correo</a>
     </div>
   </section>
 
 </main>
 
+<a class="floating-wa" href="https://wa.me/56966679318" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  ☏
+</a>
+
 <footer>
   <p>STAR TECH AUTO REPAIR – Eduardo Román Mecánica Automotriz E.I.R.L.</p>
   <p>© 2026 Todos los derechos reservados.</p>
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
